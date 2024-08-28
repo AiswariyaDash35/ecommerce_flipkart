@@ -24,7 +24,9 @@ DefaultData();
 
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors({
+  origin: 'https://66cefe6358452e000863e222--aish-flipy.netlify.app'
+}));
 app.use('/', Routes);
 
 export let paytmMerchantkey = process.env.PAYTM_MERCHANT_KEY;
